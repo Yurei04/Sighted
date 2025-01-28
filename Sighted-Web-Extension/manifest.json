@@ -1,0 +1,44 @@
+{
+    "manifest_version": 3,
+    "name": "sighted",
+    "version": "1.0",
+    "description": "A web browser extension the let the user use broswers using only their eyes",
+    "permission": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_script": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+"theme": {
+        "colors": {
+            "frame": [45, 100, 150],
+            "toolbar": [220, 230, 240],
+            "tab_background_text": [10, 48, 78],
+            "tab_text": [255, 255, 255],
+            "bookmark_text": [10, 48, 78],
+            "button_background_active": [170, 200, 230],
+            "button_background_hover": [150, 190, 220],
+            "icons": [10, 48, 78],
+            "icons_attention": [0, 120, 215],
+            "ntp_background": [220, 230, 240],
+            "ntp_card_background": [245, 245, 245],
+            "ntp_text": [10, 48, 78],
+            "popup": [220, 230, 240],
+            "popup_border": [10, 48, 78],
+            "popup_text": [10, 48, 78]
+        }
+    }
+
+
+}
